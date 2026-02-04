@@ -68,7 +68,7 @@
                 community with dedication and expertise.
             </p>
             <div style="max-width: 900px; margin: 0 auto;">
-                <img src="shop-front.jpg" alt="Rishi Electronics Shop Front"
+                <img src="images/shop-front.jpg" alt="Rishi Electronics Shop Front"
                     style="width: 100%; border-radius: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); transition: transform 0.3s ease;"
                     onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                 <div style="margin-top: 2rem; text-align: center; color: #374151; line-height: 1.8;">
@@ -209,7 +209,19 @@
             </p>
 
             <div class="booking-container">
-                <form class="booking-form" id="bookingForm">
+                <form class="booking-form" id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key - Replace with your own from https://web3forms.com -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                    <!-- Optional: Redirect after submission -->
+                    <input type="hidden" name="redirect" value="false">
+
+                    <!-- Optional: Custom subject line -->
+                    <input type="hidden" name="subject" value="New Booking Request - Rishi Electronics">
+
+                    <!-- Optional: From name -->
+                    <input type="hidden" name="from_name" value="Rishi Electronics Website">
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name" class="form-label">Full Name *</label>
@@ -402,6 +414,5 @@
 
     <script src="app.js"></script>
 </body>
-
 
 </html>
